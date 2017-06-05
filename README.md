@@ -61,15 +61,7 @@ import SvgAnimatedLinearGradient from 'react-native-svg-animated-linear-gradient
 </SvgAnimatedLinearGradient>
 ```
 ### Props
-primaryColor: '#eeeeee',
-    secondaryColor: '#dddddd',
-    duration: 2000,
-    width: 300,
-    height: 200,
-    x1: '0',
-    y1: '0',
-    x2: '100%',
-    y2: '0'
+
 |Prop   |Type   |Default   |Description
 |---|---|---|---|
 |primaryColor   |String   |'#eeeeee'   |Primary color, also background color   |
