@@ -87,7 +87,7 @@ primaryColor: '#eeeeee',
 ## Thankful
 
 - [Expo](https://expo.io)
-- [React Native Svg](https://github.com/react-native-community/react-native-svg)(https://github.com/react-native-community/react-native-svg)
+- [React Native Svg](https://github.com/react-native-community/react-native-svg)
 - [Vova Bilonenko](https://github.com/delfrrr) with [his gist](https://gist.github.com/delfrrr/0ef8871c6c4630b406e73fb66c091cf0)
 - [React Content Loader](https://github.com/danilowoz/react-content-loader)
 
