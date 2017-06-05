@@ -10,6 +10,10 @@ This component is using [expo](https://expo.io), if you don't want to use expo, 
 
 `npm i react-native-svg-animated-linear-gradient --save`
 
+Inside your component:
+```js
+import SvgAnimatedLinearGradient from 'react-native-svg-animated-linear-gradient'
+```
 ### Examples
 
 #### Instagram style
