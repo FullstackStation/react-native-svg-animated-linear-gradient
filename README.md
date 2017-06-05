@@ -8,6 +8,8 @@ This component is using [expo](https://expo.io), if you don't want to use expo, 
 ![Demo svg animated linear gradient](./images/demo-svg-animated-linear-gradient.gif)
 ## Usage
 
+`npm i react-native-svg-animated-linear-gradient --save`
+
 ### Examples
 
 #### Instagram style
