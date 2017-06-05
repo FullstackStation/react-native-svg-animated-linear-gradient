@@ -1,0 +1,33 @@
+{
+    "name": "react-native-svg-animated-linear-gradient",
+    "version": "0.1",
+    "description": "Animated linear gradient for React Native Svg",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/virusvn/react-native-svg-animated-linear-gradient.git"
+    },
+    "author": "Nhan Nguyen",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/virusvn/react-native-svg-animated-linear-gradient/issues"
+    },
+    "homepage": "https://github.com/virusvn/react-native-svg-animated-linear-gradient",
+    "keywords": [
+        "react-native-svg",
+        "react",
+        "svg",
+        "animated",
+        "animation",
+        "linear",
+        "gradient"
+    ],
+    "peerDependencies": {
+        "expo": "16.0.0",
+        "react": "16.0.0-alpha.6",
+        "react-native": "https://github.com/expo/react-native/archive/sdk-16.0.0.tar.gz",
+        "prop-types": "^15.5.10"
+    },
+    "dependencies": {
+        "d3-interpolate": "^1.1.5"
+    }
+}
