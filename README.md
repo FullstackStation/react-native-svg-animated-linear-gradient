@@ -5,9 +5,8 @@ This component make Animated Linear Gradient for all SVG components as child pro
 This component is using [expo](https://expo.io), if you don't want to use expo, feel free to fork this repo and remove expo, and use [react-native-svg](https://github.com/react-native-community/react-native-svg) instead.
 
 ## Demo
-
-![Demo svg animated linear gradient](./images/demo-svg-animated-linear-gradient.gif)
-![Demo svg animated linear gradient with another gradient angle](./images/demo-svg-animated-linear-gradient-angle.gif)
+<img src="./images/demo-svg-animated-linear-gradient.gif" width="300">
+<img src="./images/demo-svg-animated-linear-gradient-angle.gif" width="300">
 
 ## Usage
 
