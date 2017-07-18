@@ -19,11 +19,12 @@ export default class SvgAnimatedLinearGradient extends Component {
             ],
             frequence: props.duration / 2
         }
+        this._isMounted = false;
         this._animate = new Animated.Value(0)
         this.loopAnimation = this
             .loopAnimation
             .bind(this)
-    }   
+    }
     offsetValueBound(x) {
         if (x > 1) {
             return '1'
@@ -34,11 +35,14 @@ export default class SvgAnimatedLinearGradient extends Component {
         return x
     }
     componentDidMount(props) {
+        this._isMounted = true
         this.loopAnimation()
     }
-
+    componentWillUnmount() {
+        this._isMounted = false
+    }
     loopAnimation() {
-
+        if (!this._isMounted) return;
         // setup interpolate
         let interpolator = interpolate(this.state, {
             offsetValues: ['1', '1.5', '2']
