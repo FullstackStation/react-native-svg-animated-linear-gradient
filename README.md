@@ -2,7 +2,7 @@
 
 This component make Animated Linear Gradient for all SVG components as child props. You can use this component as loading component like Facebook or Instagram, used for any group of svg.
 
-This component is using [expo](https://expo.io), if you don't want to use expo, feel free to fork this repo and remove expo, and use [react-native-svg](https://github.com/react-native-community/react-native-svg) instead.
+This component is using [expo](https://expo.io), if you don't want to use expo, feel free to fork this repo and remove expo, and use [react-native-svg](https://github.com/react-native-community/react-native-svg) instead, or use the forked repo [react-native-content-loader](https://github.com/aschenkel/react-native-content-loader)
 
 ## Demo
 <table>
