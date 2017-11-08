@@ -1,4 +1,4 @@
-## SVG Animated Linear Gradient
+## SVG Animated Linear Gradient [iOS + Android]
 
 This component make Animated Linear Gradient for all SVG components as child props. You can use this component as loading component like Facebook or Instagram, used for any group of svg.
 
@@ -80,7 +80,6 @@ import SvgAnimatedLinearGradient from 'react-native-svg-animated-linear-gradient
 |y2   |String   |'0'   |y of point end gradient, accept Number or Percentage   |
 
 ## TODO
-- Test on Android
 - Write test
 
 ## My blog about React/React Native 
