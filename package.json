@@ -1,6 +1,6 @@
 {
     "name": "react-native-svg-animated-linear-gradient",
-    "version": "0.1.6",
+    "version": "0.1.7",
     "description": "Animated linear gradient for React Native Svg",
     "repository": {
         "type": "git",
