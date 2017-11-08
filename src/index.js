@@ -15,7 +15,7 @@ export default class SvgAnimatedLinearGradient extends Component {
                 '-2', '-1.5', '-1'
             ],
             offsets: [
-                '0', '0', '0'
+                '0.0001', '0.0002', '0.0003' // Avoid duplicate value cause error in Android
             ],
             frequence: props.duration / 2
         }
@@ -62,7 +62,11 @@ export default class SvgAnimatedLinearGradient extends Component {
             offsetValues[0] = this.offsetValueBound(newState.offsetValues[0]);
             offsetValues[1] = this.offsetValueBound(newState.offsetValues[1]);
             offsetValues[2] = this.offsetValueBound(newState.offsetValues[2]);
-            this.setState({offsets: offsetValues});
+            
+            // Make sure at least two offsets is different
+            if (offsetValues[0] !== offsetValues[1] || offsetValues[0] !==  offsetValues[2] || offsetValues[1] !== offsetValues[2]) {
+                this.setState({offsets: offsetValues});
+            }
             if (t < 1) {
                 requestAnimationFrame(this._animation);
             }
