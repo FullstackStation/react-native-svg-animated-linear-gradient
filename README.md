@@ -2,7 +2,7 @@
 
 This component make Animated Linear Gradient for all SVG components as child props. You can use this component as loading component like Facebook or Instagram, used for any group of svg.
 
-This component is using [expo](https://expo.io), if you don't want to use expo, feel free to fork this repo and remove expo, and use [react-native-svg](https://github.com/react-native-community/react-native-svg) instead, or use the forked repo [react-native-content-loader](https://github.com/aschenkel/react-native-content-loader)
+Feel free to use `expo` or `react-native-svg`.
 
 ## Demo
 <table>
@@ -20,11 +20,22 @@ Inside your component:
 ```js
 import SvgAnimatedLinearGradient from 'react-native-svg-animated-linear-gradient'
 ```
-### Examples
 
-#### Instagram style
+### Use with Expo 
+
+import { Svg } from 'expo';
+
+### Use with ReactNativeSvg
+
+import Svg from 'react-native-svg';
+
+## Examples
+
+Svg component is imported from `expo` or `react-native-svg` as above
+
+### Instagram style
 ```jsx
-<SvgAnimatedLinearGradient height={300}>
+<SvgAnimatedLinearGradient svgComponent={Svg} height={300}>
     <Svg.Circle cx="30" cy="30" r="30"/>
     <Svg.Rect x="75" y="13" rx="4" ry="4" width="100" height="13"/>
     <Svg.Rect x="75" y="37" rx="4" ry="4" width="50" height="8"/>
@@ -32,10 +43,10 @@ import SvgAnimatedLinearGradient from 'react-native-svg-animated-linear-gradient
 </SvgAnimatedLinearGradient>
 ```
 
-#### Facebook style
+### Facebook style
 
 ```jsx
-<SvgAnimatedLinearGradient
+<SvgAnimatedLinearGradient svgComponent={Svg}
             primaryColor="#e8f7ff"
             secondaryColor="#4dadf7"
     height={140}>
@@ -48,10 +59,11 @@ import SvgAnimatedLinearGradient from 'react-native-svg-animated-linear-gradient
 
 </SvgAnimatedLinearGradient>
 ```
-#### Code style
+### Code style
 
 ```jsx
 <SvgAnimatedLinearGradient
+            svgComponent={Svg}
             primaryColor="#fff0f6"
             secondaryColor="#f783ac"
             height={80}>
@@ -66,10 +78,11 @@ import SvgAnimatedLinearGradient from 'react-native-svg-animated-linear-gradient
     <Svg.Rect x="0" y="60" rx="3" ry="3" width="30" height="10"/>
 </SvgAnimatedLinearGradient>
 ```
-### Props
+## Props
 
 |Prop   |Type   |Default   |Description
 |---|---|---|---|
+|svgComponent   |Function   |   | Required
 |primaryColor   |String   |'#eeeeee'   |Primary color, also background color   |
 |secondaryColor   |String   |'#dddddd'   |Secondary color   |
 |width   |Number   |300   |Width of SVG   |
