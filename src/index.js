@@ -65,7 +65,7 @@ export default class SvgAnimatedLinearGradient extends Component {
             
             // Make sure at least two offsets is different
             if (offsetValues[0] !== offsetValues[1] || offsetValues[0] !==  offsetValues[2] || offsetValues[1] !== offsetValues[2]) {
-                this.setState({offsets: offsetValues});
+                this._isMounted && this.setState({offsets: offsetValues});
             }
             if (t < 1) {
                 requestAnimationFrame(this._animation);
