@@ -15,7 +15,9 @@ This component is using [expo](https://expo.io), if you don't want to use expo, 
 
 ## Usage
 `npm i react-native-svg-animated-linear-gradient --save`
+
 `npm i react-native-svg`
+
 `react-native link react-native-svg`
 
 `npm i react-native-svg`
