@@ -119,8 +119,7 @@ export default class SvgAnimatedLinearGradient extends Component {
                             stopOpacity="1"/>
                     </LinearGradient>
                     <ClipPath id="clip">
-                        <G rotation="50"
-                        origin="100, 50">
+                        <G>
                             {this.props.children}
                         </G>
                     </ClipPath>
