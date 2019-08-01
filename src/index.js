@@ -102,7 +102,7 @@ export default class SvgAnimatedLinearGradient extends Component {
     render() {
 
         return (
-            <AnimatedSvg height={this.props.height} width={this.props.width}>
+            <AnimatedSvg {...this.props}>
                 <Defs>
                     <LinearGradient id="grad" x1={this.props.x1} y1={this.props.y1} x2={this.props.x2} y2={this.props.y2}>
                         <Stop
@@ -119,8 +119,7 @@ export default class SvgAnimatedLinearGradient extends Component {
                             stopOpacity="1"/>
                     </LinearGradient>
                     <ClipPath id="clip">
-                        <G rotation="50"
-                        origin="100, 50">
+                        <G>
                             {this.props.children}
                         </G>
                     </ClipPath>
