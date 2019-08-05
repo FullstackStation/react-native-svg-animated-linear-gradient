@@ -20,10 +20,6 @@ This component is using [expo](https://expo.io), if you don't want to use expo, 
 
 `react-native link react-native-svg`
 
-`npm i react-native-svg`
-
-`react-native link react-native-svg`
-
 Inside your component:
 ```js
 import SvgAnimatedLinearGradient from 'react-native-svg-animated-linear-gradient'
