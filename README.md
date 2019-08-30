@@ -77,6 +77,7 @@ import Svg, {Circle, Rect, .... } from 'react-native-svg'
 | -------------- | ------ | --------- | ----------------------------------------------------- |
 | primaryColor   | String | '#eeeeee' | Primary color, also background color                  |
 | secondaryColor | String | '#dddddd' | Secondary color                                       |
+| duration       | Number | 2000      | Animation duration in milliseconds                    |
 | width          | Number | 300       | Width of SVG                                          |
 | height         | Number | 200       | Height of SVG                                         |
 | x1             | String | '0'       | x of point star gradient, accept Number or Percentage |
