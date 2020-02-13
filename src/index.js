@@ -20,10 +20,12 @@ export default class SvgAnimatedLinearGradient extends Component {
     constructor(props) {
         super(props);
 
+        const initialOffsetValues = props.offset
+            ? [1, 1 + props.offset / 2, 1 + props.offset]
+            : [1, 1.5, 2];
         this.state = {
-            offsetValues: [
-                '-2', '-1.5', '-1'
-            ],
+            initialOffsetValues,
+            offsetValues: [...initialOffsetValues].reverse().map(v => String(v * -1)),
             offsets: [
                 '0.0001', '0.0002', '0.0003' // Avoid duplicate value cause error in Android
             ],
@@ -55,7 +57,7 @@ export default class SvgAnimatedLinearGradient extends Component {
         if (!this._isMounted) return;
         // setup interpolate
         let interpolator = interpolate(this.state, {
-            offsetValues: ['1', '1.5', '2']
+            offsetValues: this.state.initialOffsetValues.map(v => String(v))
         });
 
         // start animation
@@ -156,6 +158,6 @@ SvgAnimatedLinearGradient.defaultProps = {
     x1: '0',
     y1: '0',
     x2: '100%',
-    y2: '0'
-
+    y2: '0',
+    offset: 1,
 }
