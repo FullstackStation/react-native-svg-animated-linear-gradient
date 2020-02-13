@@ -89,7 +89,7 @@ import Svg, {Circle, Rect, .... } from 'react-native-svg'
 - Write test
 
 ## My blog about React/React Native 
-- (Vietnamese only) [Fullstack Station](https://www.businesscard.vn/blog/category/lap-trinh/javascript/react/)
+- (Vietnamese only) [Fullstack Station](https://fullstackstation.com/category/lap-trinh/javascript/react/)
 
 ## Thankful
 
