@@ -29,7 +29,7 @@ export default class SvgAnimatedLinearGradient extends Component {
             offsets: [
                 '0.0001', '0.0002', '0.0003' // Avoid duplicate value cause error in Android
             ],
-            frequence: props.duration / 2
+            frequence: props.duration / 2 / this.props.speed
         }
         this._isMounted = false;
         this._animate = new Animated.Value(0)
@@ -64,7 +64,7 @@ export default class SvgAnimatedLinearGradient extends Component {
         let start = Date.now();
         this._animation = () => {
             const now = Date.now();
-            let t = (now - start) / this.props.duration;
+            let t = ((now - start) / this.props.duration) * this.props.speed;
             if (t > 1) {
                 t = 1
             }
@@ -97,7 +97,11 @@ export default class SvgAnimatedLinearGradient extends Component {
             })
         ]).start((event) => {
             if (event.finished) {
-                this.loopAnimation()
+                if (this.props.wait) {
+                    setTimeout(() => this.loopAnimation(), this.props.wait);
+                } else {
+                    this.loopAnimation();
+                }
             }
         })
     }
@@ -148,6 +152,9 @@ SvgAnimatedLinearGradient.propTypes = {
     y1: PropTypes.string,
     x2: PropTypes.string,
     y2: PropTypes.string,
+    offset: PropTypes.number,
+    speed: PropTypes.number,
+    wait: PropTypes.number
 }
 SvgAnimatedLinearGradient.defaultProps = {
     primaryColor: '#eeeeee',
@@ -160,4 +167,6 @@ SvgAnimatedLinearGradient.defaultProps = {
     x2: '100%',
     y2: '0',
     offset: 1,
+    speed: 1,
+    wait: 0
 }

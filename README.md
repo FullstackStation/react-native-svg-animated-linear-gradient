@@ -85,6 +85,8 @@ import Svg, {Circle, Rect, .... } from 'react-native-svg'
 | x2             | String | '100%'    | x of point end gradient, accept Number or Percentage  |
 | y2             | String | '0'       | y of point end gradient, accept Number or Percentage  |
 | offset         | Number | 1         | Gradient offset value of animation                    |
+| speed          | Number | 1         | Multiple speed of gradient animation                  |
+| wait           | Number | 0         | Wait time period of animation in milliseconds         |
 
 ## TODO
 - Write test
