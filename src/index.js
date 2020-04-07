@@ -29,7 +29,8 @@ export default class SvgAnimatedLinearGradient extends Component {
             offsets: [
                 '0.0001', '0.0002', '0.0003' // Avoid duplicate value cause error in Android
             ],
-            frequence: props.duration / 2
+            frequence: props.duration / 2,
+            useNativeDriver: props.useNativeDriver
         }
         this._isMounted = false;
         this._animate = new Animated.Value(0)
@@ -89,11 +90,13 @@ export default class SvgAnimatedLinearGradient extends Component {
         Animated.sequence([
             Animated.timing(this._animate, {
                 toValue: 1,
-                duration: this.state.frequence
+                duration: this.state.frequence,
+                useNativeDriver: this.state.useNativeDriver
             }),
             Animated.timing(this._animate, {
                 toValue: 0,
-                duration: this.state.frequence
+                duration: this.state.frequence,
+                useNativeDriver: this.state.useNativeDriver
             })
         ]).start((event) => {
             if (event.finished) {
@@ -142,6 +145,7 @@ SvgAnimatedLinearGradient.propTypes = {
     primaryColor: PropTypes.string,
     secondaryColor: PropTypes.string,
     duration: PropTypes.number,
+    useNativeDriver: PropTypes.bool,
     width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     x1: PropTypes.string,
@@ -153,6 +157,7 @@ SvgAnimatedLinearGradient.defaultProps = {
     primaryColor: '#eeeeee',
     secondaryColor: '#dddddd',
     duration: 2000,
+    useNativeDriver: true,
     width: 300,
     height: 200,
     x1: '0',

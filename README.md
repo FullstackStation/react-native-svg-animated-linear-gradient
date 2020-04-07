@@ -73,18 +73,19 @@ import Svg, {Circle, Rect, .... } from 'react-native-svg'
 ```
 ### Props
 
-| Prop           | Type   | Default   | Description                                           |
-| -------------- | ------ | --------- | ----------------------------------------------------- |
-| primaryColor   | String | '#eeeeee' | Primary color, also background color                  |
-| secondaryColor | String | '#dddddd' | Secondary color                                       |
-| duration       | Number | 2000      | Animation duration in milliseconds                    |
-| width          | Number | 300       | Width of SVG                                          |
-| height         | Number | 200       | Height of SVG                                         |
-| x1             | String | '0'       | x of point star gradient, accept Number or Percentage |
-| y1             | String | '0'       | y of point star gradient, accept Number or Percentage |
-| x2             | String | '100%'    | x of point end gradient, accept Number or Percentage  |
-| y2             | String | '0'       | y of point end gradient, accept Number or Percentage  |
-| offset         | Number | 1         | Gradient offset value of animation                    |
+| Prop            | Type    | Default   | Description                                           |
+| --------------- | ------- | --------- | ----------------------------------------------------- |
+| primaryColor    | String  | '#eeeeee' | Primary color, also background color                  |
+| secondaryColor  | String  | '#dddddd' | Secondary color                                       |
+| duration        | Number  | 2000      | Animation duration in milliseconds                    |
+| useNativeDriver | Boolean | true      | Use native driver for animations                      |
+| width           | Number  | 300       | Width of SVG                                          |
+| height          | Number  | 200       | Height of SVG                                         |
+| x1              | String  | '0'       | x of point star gradient, accept Number or Percentage |
+| y1              | String  | '0'       | y of point star gradient, accept Number or Percentage |
+| x2              | String  | '100%'    | x of point end gradient, accept Number or Percentage  |
+| y2              | String  | '0'       | y of point end gradient, accept Number or Percentage  |
+| offset          | Number  | 1         | Gradient offset value of animation                    |
 
 ## TODO
 - Write test
