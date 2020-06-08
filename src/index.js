@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types'
-import {View, StyleSheet, Animated} from 'react-native';
+import { View, StyleSheet, Animated } from 'react-native';
 
 //import Expo, { Svg } from 'expo';
 import Svg, {
@@ -11,10 +11,10 @@ import Svg, {
     Rect,
     Defs,
     Stop
-}  from 'react-native-svg';
+} from 'react-native-svg';
 
 const AnimatedSvg = Animated.createAnimatedComponent(Svg);
-const {interpolate} = require('d3-interpolate');
+const { interpolate } = require('d3-interpolate');
 
 export default class SvgAnimatedLinearGradient extends Component {
     constructor(props) {
@@ -74,10 +74,10 @@ export default class SvgAnimatedLinearGradient extends Component {
             offsetValues[0] = this.offsetValueBound(newState.offsetValues[0]);
             offsetValues[1] = this.offsetValueBound(newState.offsetValues[1]);
             offsetValues[2] = this.offsetValueBound(newState.offsetValues[2]);
-            
+
             // Make sure at least two offsets is different
-            if (offsetValues[0] !== offsetValues[1] || offsetValues[0] !==  offsetValues[2] || offsetValues[1] !== offsetValues[2]) {
-                this._isMounted && this.setState({offsets: offsetValues});
+            if (offsetValues[0] !== offsetValues[1] || offsetValues[0] !== offsetValues[2] || offsetValues[1] !== offsetValues[2]) {
+                this._isMounted && this.setState({ offsets: offsetValues });
             }
             if (t < 1) {
                 requestAnimationFrame(this._animation);
@@ -89,11 +89,13 @@ export default class SvgAnimatedLinearGradient extends Component {
         Animated.sequence([
             Animated.timing(this._animate, {
                 toValue: 1,
-                duration: this.state.frequence
+                duration: this.state.frequence,
+                useNativeDriver: this.props.useNativeDriver,
             }),
             Animated.timing(this._animate, {
                 toValue: 0,
-                duration: this.state.frequence
+                duration: this.state.frequence,
+                useNativeDriver: this.props.useNativeDriver,
             })
         ]).start((event) => {
             if (event.finished) {
@@ -110,15 +112,15 @@ export default class SvgAnimatedLinearGradient extends Component {
                         <Stop
                             offset={this.state.offsets[0]}
                             stopColor={this.props.primaryColor}
-                            stopOpacity="1"/>
+                            stopOpacity="1" />
                         <Stop
                             offset={this.state.offsets[1]}
                             stopColor={this.props.secondaryColor}
-                            stopOpacity="1"/>
+                            stopOpacity="1" />
                         <Stop
                             offset={this.state.offsets[2]}
                             stopColor={this.props.primaryColor}
-                            stopOpacity="1"/>
+                            stopOpacity="1" />
                     </LinearGradient>
                     <ClipPath id="clip">
                         <G>
@@ -133,7 +135,7 @@ export default class SvgAnimatedLinearGradient extends Component {
                     height={this.props.height}
                     width={this.props.width}
                     fill="url(#grad)"
-                    clipPath="url(#clip)"/>
+                    clipPath="url(#clip)" />
             </AnimatedSvg>
         );
     }
@@ -148,6 +150,7 @@ SvgAnimatedLinearGradient.propTypes = {
     y1: PropTypes.string,
     x2: PropTypes.string,
     y2: PropTypes.string,
+    useNativeDriver: PropTypes.bool,
 }
 SvgAnimatedLinearGradient.defaultProps = {
     primaryColor: '#eeeeee',
@@ -160,4 +163,5 @@ SvgAnimatedLinearGradient.defaultProps = {
     x2: '100%',
     y2: '0',
     offset: 1,
+    useNativeDriver: true,
 }
