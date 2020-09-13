@@ -32,7 +32,7 @@ export default class SvgAnimatedLinearGradient extends React.Component {
   constructor(props: GradientProps)
 
   offsetValueBound(x: number | string): number | string
-  componentDidMount(props: GradientProps): void
+  componentDidMount(): void
   componentWillUnmount(): void
   loopAnimation(): void
   render(): JSX.Element

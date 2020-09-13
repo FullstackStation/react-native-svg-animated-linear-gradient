@@ -46,7 +46,7 @@ export default class SvgAnimatedLinearGradient extends Component {
         }
         return x
     }
-    componentDidMount(props) {
+    componentDidMount() {
         this._isMounted = true
         this.loopAnimation()
     }
