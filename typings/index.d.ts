@@ -6,7 +6,7 @@ export interface GradientPropsMandatory {
   secondaryColor: string
   duration: number
   width: number | string
-  heigh: number | string
+  height: number | string
   x1: string,
   y1: string,
   x2: string,
