@@ -26,7 +26,9 @@ export default class SvgAnimatedLinearGradient extends React.Component {
   _isMounted: boolean
   _animate: Animated.Value
 
-  static propTypes: Record<keyof GradientPropsMandatory, any>
+  // propTypes can't be documented without interfering with existing prop typings
+  // This is not a big issue, since everyone using TS won't need to use propTypes, and the ones using JS won't be affected at all:
+  // The propTypes static property won't be shown, but the IDE will still read prop types correctly
   static defaultProps: GradientPropsMandatory
 
   constructor(props: GradientProps)
