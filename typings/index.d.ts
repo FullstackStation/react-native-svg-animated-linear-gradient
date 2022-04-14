@@ -1,5 +1,5 @@
 import React from 'react'
-import { Animated } from 'React-native'
+import { Animated } from 'react-native'
 
 export interface GradientPropsMandatory {
   primaryColor: string
